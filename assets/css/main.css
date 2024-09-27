@@ -7,7 +7,7 @@
  ================================================== */
 @font-face {
   font-family: "Imperial";
-  src: url("../fonts/urwimperialt.otf");
+  src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf");
 }
 
 /* VARIABLES */
@@ -247,7 +247,7 @@ section p {
 }
 
 #listaColegio {
-  border: 2px solid black;
+  border: 2px solid rgb(240, 240, 240);
   border-radius: var(--borde) !important;
   -webkit-border-radius: var(--borde) !important;
   -moz-border-radius: var(--borde) !important;
@@ -622,6 +622,19 @@ a {
   }
   #video {
     height: 400px;
+  }
+
+  .scroll {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .card {
+    flex: auto;
+    flex-shrink: 0;
+    max-width: 300px;
   }
 }
 
