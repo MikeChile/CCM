@@ -2,21 +2,51 @@
 <html lang="en">
 
 <head>
+    <!-- Metadatos esenciales -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Sitio web oficial del Colegio Corazón de María, donde puedes encontrar información sobre noticias, admisiones y eventos escolares.">
+    <meta name="keywords" content="colegio, educación, noticias, admisión, Corazón de María, eventos escolares">
+    <meta name="author" content="Mike Dev">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo CCM.png">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Boxicons para íconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- SEO Social Media Tags -->
+    <meta property="og:title" content="Colegio Corazón de María - Noticias y Admisiones">
+    <meta property="og:description"
+        content="Entérate de las últimas noticias y procesos de admisión en el Colegio Corazón de María.">
+    <meta property="og:image" content="./assets/img/logo CCM.png">
+    <meta property="og:url" content="https://tu-sitio-web.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Colegio Corazón de María - Noticias y Admisiones">
+    <meta name="twitter:description"
+        content="Entérate de las últimas noticias y procesos de admisión en el Colegio Corazón de María.">
+    <meta name="twitter:image" content="./assets/img/logo CCM.png">
+
+    <!-- Título de la página -->
     <title>Colegio Corazón de María</title>
 </head>
 
+
 <body>
-
+    <!-- LOADER-->
     <div id="loader-out">
-
         <div class="row cf">
             <div class="three col">
                 <div class="loader" id="loader-6">
@@ -27,109 +57,171 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- BARRA SUPERIOR-->
+    <div id="barra">
+        <a href="https://www.lirmi.com/" class="link">
+            <i class='bx bxs-lock'></i><span class="d-none d-md-inline"> Lirmi</span>
+        </a>
+        <a href="https://bibliotecadigitalccm.cl/" class="link">
+            <i class='bx bxs-book-reader'></i><span class="d-none d-md-inline"> Biblioteca Digital</span>
+        </a>
+        <!-- Botón para activar el modal -->
+        <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#contactModal">
+            <i class='bx bx-envelope'></i><span class="d-none d-md-inline"> Contacto</span>
+        </a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <section class="contact_us">
+                            <div class="container">
+                                <div class="row m-0">
+                                    <div class="col-md-10 offset-md-1">
+                                        <div class="contact_inner">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="contact_form_inner">
+                                                        <div class="m-0 p-4">
+                                                            <h3>Contactanos</h3>
+                                                            <p>Siéntete libre de contactarnos en cualquier momento. ¡Te
+                                                                responderemos tan pronto como podamos!.</p>
+                                                            <input type="text" class="form-control form-group"
+                                                                placeholder="Nombre" />
+                                                            <input type="text" class="form-control form-group"
+                                                                placeholder="Email" />
+                                                            <textarea class="form-control form-group"
+                                                                placeholder="Mensaje"></textarea>
+                                                            <button class="contact_form_submit">Enviar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="right_conatct_social_icon d-flex align-items-end">
+                                                        <div class="socil_item_inner d-flex">
+                                                            <!--
+                                                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
-    <div class="container">
+    <!-- BARRA PRINCIPAL-->
+    <nav class="navbar">
+        <div class="container-fluid">
 
-        <div id="barra">
-            <a href="" class="link">
-                <i class='bx bxs-lock'></i><span class="d-none d-md-inline"> Lirmi</span>
-            </a>
-            <a href="" class="link">
-                <i class='bx bxs-book-reader'></i><span class="d-none d-md-inline"> Biblioteca Digital</span>
-            </a>
-            <a href="" class="link">
-                <i class='bx bx-envelope'></i><span class="d-none d-md-inline"> Contacto</span>
-            </a>
-        </div>
-
-        <nav class="navbar">
-            <div class="container-fluid">
-
-                <div class="row cajaBarra">
-                    <div class="col-6 col-md-4 order-1 order-md-1">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                            Menú
-                        </button>
-                    </div>
-                    <div class="col-12 col-md-4 text-center order-3 order-md-2">
-                        <p id="titulo">Corazón <img class="logo" src="./assets/img/logo CCM.png" alt=""> de María</p>
-                    </div>
-                    <div class="col-6 col-md-4 text-end order-2 order-md-3">
-                        <div class="navbar-brand">
-                            <a href="" class="d-none d-md-inline"><i class='bx bx-search'></i></a>
-                            <a href="#" class="d-none d-md-inline">Noticias</a>
-                            <a href="#">Admision</a>
-                        </div>
-                    </div>
+            <div class="row cajaBarra">
+                <div class="col-6 col-md-4 order-1 order-md-1">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        Menú
+                    </button>
                 </div>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Colegio
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Historia</a></li>
-                                <li><a class="dropdown-item" href="#">Misión, Visión y Valores</a></li>
-                                <li><a class="dropdown-item" href="#">Misioneras del Corazón de María</a></li>
-                                <li><a class="dropdown-item" href="#">Infraestructura</a></li>
-
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Organización</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Documentos
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Academicos</a></li>
-                                <li><a class="dropdown-item" href="#">Institucionales</a></li>
-                                <li><a class="dropdown-item" href="#">Informativos</a></li>
-                                <li><a class="dropdown-item" href="#">Lecturas Complementarias</a></li>
-
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Talleres</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
+                <div class="col-12 col-md-4 text-center order-3 order-md-2">
+                    <p id="titulo">CORAZÓN <img class="logo" src="./assets/img/logo CCM.png" alt=""> DE MARÍA</p>
+                </div>
+                <div class="col-6 col-md-4 text-end order-2 order-md-3">
+                    <div class="navbar-brand">
+                        <a href="" class="d-none d-md-inline"><i class='bx bx-search'></i></a>
+                        <a href="#" class="d-none d-md-inline">Noticias</a>
+                        <a href="#">Admisión</a>
+                    </div>
                 </div>
             </div>
-        </nav>
 
-        <div id="barra-info" class="mb-3">
-            <p>Comienzo de clases 2024 <a href=""><b>info aquí</b></a></p>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Colegio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Historia</a></li>
+                            <li><a class="dropdown-item" href="#">Misión, Visión y Valores</a></li>
+                            <li><a class="dropdown-item" href="#">Misioneras del Corazón de María</a></li>
+                            <li><a class="dropdown-item" href="#">Infraestructura</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Organización</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Documentos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Academicos</a></li>
+                            <li><a class="dropdown-item" href="#">Institucionales</a></li>
+                            <li><a class="dropdown-item" href="#">Informativos</a></li>
+                            <li><a class="dropdown-item" href="#">Lecturas Complementarias</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Talleres</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
         </div>
+    </nav>
 
-        <div id="video">
-            <video autoplay muted loop id="backgroundVideo">
-                <source src="assets/video/videocol.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de videos.
-            </video>
-            <button id="audioButton" class="audio-control">🔇</button>
-        </div>
+    <!-- BARRA DE INFORMACIÓN-->
+    <div id="barra-info" class="mb-3">
+        <p>Comienzo de clases 2024 <a href=""><b>info aquí</b></a></p>
+    </div>
 
+    <!-- VIDEO PRESENTACIÓN-->
+    <div id="video">
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="assets/video/videocol.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+        <button id="audioButton" class="audio-control"><i class='bx bxs-volume-full'></i></button>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL-->
+    <div class="container">
+
+        <!-- INFORMACIÓN IMPORTANTE-->
         <section id="about" class="mt-4">
             <h4>Colegio Corazón de María</h4>
             <h2>Primer día de Clases 2024</h2>
@@ -140,6 +232,7 @@
             </p>
         </section>
 
+        <!--Noticias
         <section id="noticias" class="my-4">
             <h4>Colegio Corazón de María</h4>
             <h2>Noticias CCM</h2>
@@ -177,9 +270,42 @@
                 </div>
             </div>
 
+        </section>-->
+
+        <!-- SECCIÓN NOTICIAS -->
+        <!--Noticias 2.0-->
+        <section class="d-none d-sm-inline" id="noticias" class="my-4">
+            <h4>Colegio Corazón de María</h4>
+            <h2>Noticias CCM</h2>
+
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="noticia">
+                        <img src="./assets/img/noticias/noticia5.png" alt="" class="img-noticia">
+                        <div class="titulo-noticia">Destacado desempeño del taller de Handball femenino</div>
+                    </div>
+                    <div class="noticia">
+                        <img src="./assets/img/noticias/noticia4.jpg" alt="" class="img-noticia">
+                        <div class="titulo-noticia">Simulacro regional de sismo</div>
+                    </div>
+                    <div class="noticia">
+                        <img src="./assets/img/noticias/noticia3.jpg" alt="" class="img-noticia">
+                        <div class="titulo-noticia">La Importancia del Uso Seguro de las Redes Sociales</div>
+                    </div>
+                    <div class="noticia">
+                        <img src="./assets/img/noticias/noticia2.png" alt="" class="img-noticia">
+                        <div class="titulo-noticia">Proceso de Elección de CGPA 2025</div>
+                    </div>
+                    <div class="noticia">
+                        <img src="./assets/img/noticias/noticia1.jpg" alt="" class="img-noticia">
+                        <div class="titulo-noticia">Campeonato Escolar de Cueca de San Miguel –</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <div class="d-md-none">
+        <!--Noticias movil-->
+        <div class="d-sm-none">
             <div class="scroll">
                 <div class="card">
                     <div class="card-body">
@@ -228,8 +354,10 @@
             </div>
         </div>
 
-
+        <!-- SECCIÓN COMUNICADOS -->
         <section id="comunicado">
+            <h4>Colegio Corazón de María</h4>
+            <h2>Comunicados</h2>
             <p class="m-2 mb-5">
                 Querida Comunidad CCM: Los siguientes son los horarios de entrada y salida del primer día de clases del
                 año escolar 2024 para los distintos niveles de nuestra institución: Primer día 2024 ¡Nos vemos en marzo!
@@ -237,8 +365,10 @@
             </p>
         </section>
 
+        <!-- SECCIÓN DE MAS CONTENIDOS POR PESTAÑAS -->
         <section id="links">
 
+            <!-- PESTAÑAS -->
             <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="colegio-tab" data-bs-toggle="tab"
@@ -268,6 +398,7 @@
             </ul>
 
             <div class="tab-content" id="myTabContent">
+                <!-- COLEGIO -->
                 <div class="tab-pane fade show active" id="colegio-tab-pane" role="tabpanel"
                     aria-labelledby="colegio-tab" tabindex="0">
                     <h4 class="mt-4">Colegio Corazón de María</h4>
@@ -458,6 +589,7 @@
                     </div>
 
                 </div>
+                <!-- ORGANIZACIÓN -->
                 <div class="tab-pane fade" id="organizacion-tab-pane" role="tabpanel" aria-labelledby="organizacion-tab"
                     tabindex="0">
                     <h4 class="mt-4">Colegio Corazón de María</h4>
@@ -529,6 +661,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- DOCUMENTOS-->
                 <div class="tab-pane fade" id="documentos-tab-pane" role="tabpanel" aria-labelledby="documentos-tab"
                     tabindex="0">
                     <h4 class="mt-4">Colegio Corazón de María</h4>
@@ -674,11 +807,69 @@
                         </div>
                     </div>
                 </div>
+                <!-- CONTACTO -->
                 <div class="tab-pane fade" id="contacto-tab-pane" role="tabpanel" aria-labelledby="contacto-tab"
                     tabindex="0">
                     <h4 class="mt-4">Colegio Corazón de María</h4>
                     <h2 class="my-2">Contacto</h2>
+
+                    <section class="contact_us">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 offset-md-1">
+                                    <div class="contact_inner">
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <div class="contact_form_inner">
+                                                    <div class="contact_field">
+                                                        <h3>Contactanos</h3>
+                                                        <p>Siéntete libre de contactarnos en cualquier momento. ¡Te
+                                                            responderemos tan pronto como podamos!.</p>
+                                                        <input type="text" class="form-control form-group"
+                                                            placeholder="Nombre" />
+                                                        <input type="text" class="form-control form-group"
+                                                            placeholder="Email" />
+                                                        <textarea class="form-control form-group"
+                                                            placeholder="Mensaje"></textarea>
+                                                        <button class="contact_form_submit">Enviar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="right_conatct_social_icon d-flex align-items-end">
+                                                    <div class="socil_item_inner d-flex">
+                                                        <!--
+                                                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contact_info_sec">
+                                            <h4>Información</h4>
+                                            <div class="d-flex info_single align-items-center">
+                                                <i class="fas fa-headset"></i>
+                                                <span>(56 2) 2522 3387</span>
+                                            </div>
+                                            <div class="d-flex info_single align-items-center">
+                                                <i class="fas fa-envelope-open-text"></i>
+                                                <span>ccm.contacto@colegiocorazondemaria.cl</span>
+                                            </div>
+                                            <div class="d-flex info_single align-items-center">
+                                                <i class="fas fa-map-marked-alt"></i>
+                                                <span>San Nicolás #1261, San Miguel, Santiago de Chile</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
+                <!-- TALLERES -->
                 <div class="tab-pane fade" id="talleres-tab-pane" role="tabpanel" aria-labelledby="talleres-tab"
                     tabindex="0">
                     <h4 class="mt-4">Colegio Corazón de María</h4>
@@ -687,10 +878,12 @@
             </div>
 
 
-
         </section>
 
+        <!-- SECCIÓN DE MAS INFORMACIONES -->
         <section id="mas_informaciones" class="mb-4">
+            <h4>Colegio Corazón de María</h4>
+            <h2>Más Informaciones</h2>
             <div class="row">
                 <div class="col-12 col-md-4 mb-2">
                     <div class="row">
@@ -721,6 +914,7 @@
 
     </div>
 
+    <!-- FOOTER -->
     <footer class="footer-section">
         <div class="container">
             <div class="footer-cta pt-5 pb-5">
@@ -829,28 +1023,10 @@
         </div>
     </footer>
 
-    <script>
+    <!-- SCRIPTS -->
+    <script src="./assets/js/main.js"></script>
 
-        document.getElementById('copyright-t').innerHTML = `Copyright &copy; ${new Date().getFullYear()}, Derechos reservados CCM, creado por <a href="https://mikechile.github.io/portafolio/">Mike Dev</a>`;
-        $(document).ready(function () {
-            setTimeout(function () {
-                $('#loader-out').fadeOut('slow');
-            }, 3000); // 3 segundos
-        });
-        const video = document.getElementById('backgroundVideo');
-        const audioButton = document.getElementById('audioButton');
-
-        audioButton.addEventListener('click', () => {
-            if (video.muted) {
-                video.muted = false;  // Activa el sonido
-                audioButton.textContent = '🔊';  // Cambia el ícono
-            } else {
-                video.muted = true;  // Desactiva el sonido
-                audioButton.textContent = '🔇';  // Cambia el ícono
-            }
-        });
-    </script>
-
+    <!-- SCRIPT DE FUNCIONAMIENTO DE BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
