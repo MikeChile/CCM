@@ -107,7 +107,13 @@ body {
 .logo {
   width: 100px;
 }
+#admision {
+  background-color: #dc3545;
+}
 
+#admision:hover {
+  background-color: var(--color-gold);
+}
 /* VIDEO */
 #video {
   position: relative;
