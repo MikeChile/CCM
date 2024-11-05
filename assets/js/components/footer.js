@@ -1,5 +1,5 @@
-// assets/js/components/footer.js
-export function cargarFooter() {
+// footer.js
+function loadFooter() {
     const footerHTML = `
         <footer class="footer-section">
         <div class="container">
@@ -109,6 +109,8 @@ export function cargarFooter() {
         </div>
     </footer>
     `;
-
-    document.querySelector('#footer-components').innerHTML = footerHTML;
+    document.getElementById('footer-component').innerHTML = footerHTML;
 }
+
+// Llama a la función al cargar el archivo
+loadFooter();
