@@ -32,16 +32,12 @@ function loadHeader() {
                                                 <div class="col-md-10">
                                                     <div class="contact_form_inner">
                                                         <div class="m-0 p-4">
-                                                            <h3>Contactanos</h3>
-                                                            <p>Siéntete libre de contactarnos en cualquier momento. ¡Te
-                                                                responderemos tan pronto como podamos!.</p>
-                                                            <input type="text" class="form-control form-group"
-                                                                placeholder="Nombre" />
-                                                            <input type="text" class="form-control form-group"
-                                                                placeholder="Email" />
-                                                            <textarea class="form-control form-group"
-                                                                placeholder="Mensaje"></textarea>
-                                                            <button class="contact_form_submit">Enviar</button>
+                                                            <h3>Contáctanos</h3>
+                                                            <p>Siéntete libre de contactarnos en cualquier momento. ¡Te responderemos tan pronto como podamos!</p>
+                                                            <input type="text" id="nombre" class="form-control form-group mb-2" placeholder="Nombre" required />
+                                                            <input type="email" id="email" class="form-control form-group mb-2" placeholder="Email" required />
+                                                            <textarea id="mensaje" class="form-control form-group mb-2" placeholder="Mensaje" required></textarea>
+                                                            <button class="contact_form_submit" id="sendEmail">Enviar</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -74,7 +70,6 @@ function loadHeader() {
     <!-- BARRA PRINCIPAL-->
     <nav class="navbar">
         <div class="container-fluid">
-
             <div class="row cajaBarra">
                 <div class="col-6 col-md-4 order-1 order-md-1">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -113,7 +108,6 @@ function loadHeader() {
                             <li><a class="dropdown-item" href="#">Misión, Visión y Valores</a></li>
                             <li><a class="dropdown-item" href="#">Misioneras del Corazón de María</a></li>
                             <li><a class="dropdown-item" href="#">Infraestructura</a></li>
-
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -129,12 +123,8 @@ function loadHeader() {
                             <li><a class="dropdown-item" href="#">Institucionales</a></li>
                             <li><a class="dropdown-item" href="#">Informativos</a></li>
                             <li><a class="dropdown-item" href="#">Lecturas Complementarias</a></li>
-
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link" href="talleres.html">Talleres</a>
                     </li>
@@ -153,6 +143,47 @@ function loadHeader() {
     </div>
     `;
     document.getElementById('header-component').innerHTML = headerHTML;
+
+    document.getElementById('sendEmail').addEventListener('click', function () {
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const mensaje = document.getElementById('mensaje').value;
+
+        // Validar que los campos no estén vacíos
+        if (!nombre || !email || !mensaje) {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
+
+        // Validar formato de correo electrónico
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert('Por favor, ingresa un correo electrónico válido.');
+            return;
+        }
+
+        // Validar longitud del mensaje
+        const minMessageLength = 10;
+        const maxMessageLength = 500;
+        if (mensaje.length < minMessageLength || mensaje.length > maxMessageLength) {
+            alert(`El mensaje debe tener entre ${minMessageLength} y ${maxMessageLength} caracteres.`);
+            return;
+        }
+
+        // Enviar el correo
+        emailjs.send("service_ow3d7tg", "template_c4ucvlu", {
+            from_name: nombre,
+            from_email: email,
+            message: mensaje
+        })
+            .then(function (response) {
+                console.log('Éxito!', response.status, response.text);
+                alert('Mensaje enviado con éxito!');
+            }, function (error) {
+                console.log('Error:', error);
+                alert('Error al enviar el mensaje. Inténtalo de nuevo.');
+            });
+    });
 }
 
 // Ejecuta la función al cargar el archivo

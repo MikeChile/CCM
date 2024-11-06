@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>EmailJS Test</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("1TbyQx7QRVmwpvrJA"); // Reemplaza con tu clave pública
+        })();
+    </script>
+</head>
+
+<body>
+    <button id="sendEmail">Enviar Correo</button>
+    <script>
+        document.getElementById('sendEmail').addEventListener('click', function () {
+            emailjs.send("service_ow3d7tg", "template_c4ucvlu", {
+                from_name: "Nombre de Prueba",
+                from_email: "mxzthemaster@gmail.com",
+                message: "Este es un mensaje de prueba."
+            })
+                .then(function (response) {
+                    console.log('Éxito!', response.status, response.text);
+                }, function (error) {
+                    console.log('Error:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>

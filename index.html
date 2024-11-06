@@ -41,6 +41,14 @@
 
     <!-- Título de la página -->
     <title>Colegio Corazón de María</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("1TbyQx7QRVmwpvrJA"); // Reemplaza TU_PUBLIC_KEY con tu clave pública de EmailJS
+        })();
+    </script>
 </head>
 
 <body>
@@ -51,7 +59,6 @@
     <!-- HEADER -->
     <div id="header-component"></div>
     <script src="./assets/js/components/header.js"></script>
-
 
     <!-- VIDEO PRESENTACIÓN-->
     <div id="video">
@@ -229,11 +236,6 @@
                     <button class="nav-link" id="documentos-tab" data-bs-toggle="tab"
                         data-bs-target="#documentos-tab-pane" type="button" role="tab"
                         aria-controls="documentos-tab-pane" aria-selected="false">Documentos</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contacto-tab" data-bs-toggle="tab" data-bs-target="#contacto-tab-pane"
-                        type="button" role="tab" aria-controls="contacto-tab-pane"
-                        aria-selected="false">Contacto</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="talleres-tab" data-bs-toggle="tab" data-bs-target="#talleres-tab-pane"
@@ -652,68 +654,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- CONTACTO -->
-                <div class="tab-pane fade" id="contacto-tab-pane" role="tabpanel" aria-labelledby="contacto-tab"
-                    tabindex="0">
-                    <h4 class="mt-4">Colegio Corazón de María</h4>
-                    <h2 class="my-2">Contacto</h2>
-
-                    <section class="contact_us">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-10 offset-md-1">
-                                    <div class="contact_inner">
-                                        <div class="row">
-                                            <div class="col-md-10">
-                                                <div class="contact_form_inner">
-                                                    <div class="contact_field">
-                                                        <h3>Contactanos</h3>
-                                                        <p>Siéntete libre de contactarnos en cualquier momento. ¡Te
-                                                            responderemos tan pronto como podamos!.</p>
-                                                        <input type="text" class="form-control form-group"
-                                                            placeholder="Nombre" />
-                                                        <input type="text" class="form-control form-group"
-                                                            placeholder="Email" />
-                                                        <textarea class="form-control form-group"
-                                                            placeholder="Mensaje"></textarea>
-                                                        <button class="contact_form_submit">Enviar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="right_conatct_social_icon d-flex align-items-end">
-                                                    <div class="socil_item_inner d-flex">
-                                                        <!--
-                                                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="contact_info_sec">
-                                            <h4>Información</h4>
-                                            <div class="d-flex info_single align-items-center">
-                                                <i class="fas fa-headset"></i>
-                                                <span>(56 2) 2522 3387</span>
-                                            </div>
-                                            <div class="d-flex info_single align-items-center">
-                                                <i class="fas fa-envelope-open-text"></i>
-                                                <span>ccm.contacto@colegiocorazondemaria.cl</span>
-                                            </div>
-                                            <div class="d-flex info_single align-items-center">
-                                                <i class="fas fa-map-marked-alt"></i>
-                                                <span>San Nicolás #1261, San Miguel, Santiago de Chile</span>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
                 <!-- TALLERES -->
                 <div class="tab-pane fade" id="talleres-tab-pane" role="tabpanel" aria-labelledby="talleres-tab"
                     tabindex="0">
@@ -765,7 +705,7 @@
 
     <!-- FOOTER -->
     <div id="footer-component"></div>
-    <script src="./assets/js/components/footer.js"></script> <!-- Incluye el archivo del footer -->
+    <script src="./assets/js/components/footer.js"></script>
 
     <!-- SCRIPTS -->
     <script src="./assets/js/main.js"></script>
