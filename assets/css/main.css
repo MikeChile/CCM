@@ -790,6 +790,36 @@ button.contact_form_submit {
   padding-bottom: 10px;
 }
 
+#search-results {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  color: black;
+  left: 0;
+  margin-top: 10px;
+}
+#search-results div {
+  padding: 10px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  text-align: center;
+}
+#search-results div a {
+  background: none;
+  border-radius: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  color: black;
+}
+#search-results div:hover {
+  background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+}
+
 /*MEDIA QUERYS*/
 @media (max-width: 576px) {
   #listaColegio {
@@ -831,6 +861,16 @@ button.contact_form_submit {
   }
   .info_single {
     margin: 20px 0px;
+  }
+
+  #search-input {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: 40px;
+  }
+  #search-results {
+    margin-top: 50px;
   }
 }
 

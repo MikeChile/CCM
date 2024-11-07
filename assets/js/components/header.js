@@ -1,5 +1,51 @@
 // header.js
-function loadHeader() {
+
+async function loadPages() {
+    try {
+        const response = await fetch('../../../datos/pages.json');
+        const pages = await response.json();
+        return pages;
+    } catch (error) {
+        console.error('Error al cargar las páginas:', error);
+        return [];
+    }
+}
+
+function setupSearch(pages) {
+    const searchIcon = document.getElementById('search-icon');
+    const searchInput = document.getElementById('search-input');
+    const resultsContainer = document.getElementById('search-results');
+
+    searchIcon.addEventListener('click', function (event) {
+        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        searchInput.classList.toggle('d-none'); // Mostrar/ocultar el input de búsqueda
+        searchInput.focus(); // Enfocar el input
+        resultsContainer.classList.add('d-none'); // Ocultar resultados al abrir el input
+    });
+
+    searchInput.addEventListener('input', function () {
+        const query = searchInput.value.toLowerCase();
+        const filteredPages = pages.filter(page => page.title.toLowerCase().includes(query));
+
+        resultsContainer.innerHTML = ''; // Limpiar resultados anteriores
+        if (filteredPages.length > 0) {
+            resultsContainer.classList.remove('d-none');
+            filteredPages.forEach(page => {
+                const resultItem = document.createElement('div');
+                resultItem.innerHTML = `<a href="${page.url}">${page.title}</a>`;
+                resultItem.addEventListener('click', () => {
+                    window.location.href = page.url; // Redirigir al hacer clic en un resultado
+                });
+                resultsContainer.appendChild(resultItem);
+            });
+        } else {
+            resultsContainer.classList.add('d-none'); // Ocultar si no hay resultados
+        }
+    });
+}
+
+//cargar header
+async function loadHeader() {
     const headerHTML = `
         <!-- BARRA SUPERIOR-->
     <div id="barra">
@@ -85,7 +131,10 @@ function loadHeader() {
                 </div>
                 <div class="col-6 col-md-4 text-end order-2 order-md-3">
                     <div class="navbar-brand">
-                        <a href="" class="d-none d-md-inline"><i class='bx bx-search'></i></a>
+                       <a href="#" id="search-icon"><i class='bx bx-search'></i></a>
+                            <input type="text" id="search-input" class="d-none" placeholder="Buscar..." aria-label="Buscar">
+                            <div id="search-results" class="d-none"></div>
+
                         <a href="noticias.html" class="d-none d-md-inline">Noticias</a>
                         <a href="admision-2025.html" id="admision">Admisión</a>
                     </div>
@@ -128,11 +177,7 @@ function loadHeader() {
                     <li class="nav-item">
                         <a class="nav-link" href="talleres.html">Talleres</a>
                     </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
+                </ul>                
             </div>
         </div>
     </nav>
@@ -143,6 +188,10 @@ function loadHeader() {
     </div>
     `;
     document.getElementById('header-component').innerHTML = headerHTML;
+
+    // Cargar las páginas y configurar la búsqueda
+    const pages = await loadPages();
+    setupSearch(pages);
 
     document.getElementById('sendEmail').addEventListener('click', function () {
         const nombre = document.getElementById('nombre').value;
