@@ -32,7 +32,7 @@ function setupSearch(pages) {
             resultsContainer.classList.remove('d-none');
             filteredPages.forEach(page => {
                 const resultItem = document.createElement('div');
-                resultItem.innerHTML = `<a href="${page.url}">${page.title}</a>`;
+                resultItem.innerHTML = `<a href="../../../pages/${page.url}">${page.title}</a>`;
                 resultItem.addEventListener('click', () => {
                     window.location.href = page.url; // Redirigir al hacer clic en un resultado
                 });
@@ -126,7 +126,7 @@ async function loadHeader() {
                     </button>
                 </div>
                 <div class="col-12 col-md-4 text-center order-3 order-md-2">
-                    <p id="titulo">CORAZÓN <a href="../../../index.html"><img class="logo" src="../assets/img/logo CCM.png"
+                    <p id="titulo">CORAZÓN <a href="index.html"><img class="logo" src="./assets/img/logo CCM.png"
                                 alt=""></a> DE MARÍA</p>
                 </div>
                 <div class="col-6 col-md-4 text-end order-2 order-md-3">
@@ -135,8 +135,8 @@ async function loadHeader() {
                             <input type="text" id="search-input" class="d-none" placeholder="Buscar..." aria-label="Buscar">
                             <div id="search-results" class="d-none"></div>
 
-                        <a href="noticias.html" class="d-none d-md-inline">Noticias</a>
-                        <a href="admision-2025.html" id="admision">Admisión</a>
+                        <a href="./pages/noticias.html" class="d-none d-md-inline">Noticias</a>
+                        <a href="./pages/admision-2025.html" id="admision">Admisión</a>
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@ async function loadHeader() {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -153,11 +153,11 @@ async function loadHeader() {
                             Colegio
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./colegio.html">Equipos</a></li>
-                            <li><a class="dropdown-item" href="./historia.html">Historia</a></li>
-                            <li><a class="dropdown-item" href="./mision-vision-valores.html">Misión, Visión y Valores</a></li>
-                            <li><a class="dropdown-item" href="./misioneras-del-corazon-de-maria.html">Misioneras del Corazón de María</a></li>
-                            <li><a class="dropdown-item" href="./infraestructura.html">Infraestructura</a></li>
+                            <li><a class="dropdown-item" href="./pages/colegio.html">Equipos</a></li>
+                            <li><a class="dropdown-item" href="./pages/historia.html">Historia</a></li>
+                            <li><a class="dropdown-item" href="./pages/mision-vision-valores.html">Misión, Visión y Valores</a></li>
+                            <li><a class="dropdown-item" href="./pages/misioneras-del-corazon-de-maria.html">Misioneras del Corazón de María</a></li>
+                            <li><a class="dropdown-item" href="./pages/infraestructura.html">Infraestructura</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

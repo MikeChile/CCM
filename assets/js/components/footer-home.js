@@ -40,7 +40,7 @@ function loadFooter() {
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="../../../assets/img/logo CCM.png" class="img-fluid"
+                                <a href="index.html"><img src="./assets/img/logo CCM.png" class="img-fluid"
                                         alt="logo"></a>
                             </div>
 
@@ -97,7 +97,7 @@ function loadFooter() {
                     <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                         <div class="footer-menu">
                             <ul>
-                                <li><a href="../../../index.html">Inicio</a></li>
+                                <li><a href="index.html">Inicio</a></li>
                                 <li><a href="#">Terminos y condiciones</a></li>
                                 <li><a href="#">Politicas de privacidad</a></li>
                                 <li><a href="#">Contacto</a></li>
