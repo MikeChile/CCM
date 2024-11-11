@@ -161,7 +161,7 @@ async function loadHeader() {
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Organización</a>
+                        <a class="nav-link" href="./organizacion.html">Organización</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
